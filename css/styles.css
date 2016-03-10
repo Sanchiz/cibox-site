@@ -24,6 +24,36 @@ h6 {
   font-size: 14px;
 }
 
+.navbar {
+  background-color: #020001;
+  border-color: #424242;
+}
+.navbar .navbar-brand {
+  padding: 3px;
+}
+.navbar .navbar-brand img {
+  max-height: 100%;
+}
+.navbar .navbar-collapse {
+  border-color: #424242;
+}
+.navbar .navbar-right a {
+  color: #E9E9E9 !important;
+}
+.navbar .navbar-right a:hover {
+  color: #BCBCBC !important;
+}
+.navbar .navbar-toggle {
+  background-color: #020001 !important;
+  border-color: #E9E9E9;
+}
+.navbar .navbar-toggle .icon-bar {
+  background-color: #E9E9E9;
+}
+.navbar .navbar-toggle:hover {
+  background-color: #020001;
+}
+
 .lead {
   font-size: 18px;
   font-weight: 400;
@@ -35,14 +65,14 @@ h6 {
   padding-bottom: 50px;
   text-align: center;
   color: #f8f8f8;
-  background: url(../img/intro-bg.jpg) no-repeat center center;
+  background: url(../img/banners/banner-blur.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .intro-message {
   position: relative;
-  padding-top: 20%;
-  padding-bottom: 20%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .intro-message > h1 {
