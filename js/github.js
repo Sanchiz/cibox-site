@@ -5,11 +5,25 @@ $.getJSON( "https://api.github.com/repos/cibox/cibox/stats/contributors", functi
     var items = [];
     console.log(data);
     $.each( data, function( key, val ) {
-        items.push( "<div class='col-lg-2' id='@" + val.author.login + "'><a target=_blank href='" + val.author.html_url + "'><img src='" + val.author.avatar_url + "&s=60'><br></a><div style='margin-bottom:20px'>" + val.author.login + "</div></div>" );
+        console.log(val.author);
+        items.push("<div class='col-lg-2 col-sm-2 col-xs-4 contributor' id='@" + val.author.login + "'>" +
+                "<div class='contributor-wrapper'>" +
+                "<div class='contributor-photo'>" +
+                    "<a target=_blank href='" + val.author.html_url + "'>" +
+                        "<img src='" + val.author.avatar_url + "&s=400'>" +
+                    "</a>" +
+                "</div>" +
+                "<div class='contributor-name'>" +
+                    "<a target=_blank href='" + val.author.html_url + "'>" +
+                        val.author.login +
+                    "</a>" +
+                "</div>" +
+                "</div>" +
+            "</div>" );
     });
     items.reverse();
     $( "<div/>", {
-        "class": "my-new-list",
+        "class": "contributors-list",
         html: items.join( "" )
-    }).appendTo( ".contact" );
+    }).appendTo( ".contributors" );
 });
