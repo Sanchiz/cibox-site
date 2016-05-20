@@ -3,7 +3,6 @@
  */
 $.getJSON( "https://api.github.com/repos/cibox/cibox/stats/contributors", function( data ) {
     var items = [];
-    console.log(data);
     $.each( data, function( key, val ) {
         console.log(val.author);
         items.push("<div class='col-lg-2 col-sm-2 col-xs-4 contributor' id='@" + val.author.login + "'>" +
